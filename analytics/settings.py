@@ -25,7 +25,7 @@ SECRET_KEY = 'plhr0i1igvyno-pdi5_y7x=)8ea4cf@zqj9ki0=u@7*kxe=*o='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://google-search-console-app.herokuapp.com/", "localhost", '127.0.0.8000']
+ALLOWED_HOSTS = ["google-search-console-app.herokuapp.com", "localhost", '127.0.0.8000']
 
 
 # Application definition
