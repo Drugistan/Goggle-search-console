@@ -1,1 +1,1 @@
-web : gunicorn analytics.wsgi
+web: gunicorn analytics.wsgi
