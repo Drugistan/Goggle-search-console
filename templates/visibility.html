@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block title %}Traffic Dashboard{% endblock %}
+
+{% block content %}
+
+<style>
+  .counts {
+    font-size: 20px;
+    font-weight: 600
+  }
+
+  .tile_stats_counts {
+    padding: 0 10px 0 200px;
+    text-overflow: ellipsis;
+    position: relative;
+
+  }
+
+  .mybtn {
+    border-radius: 20px;
+
+  }
+
+  /* .styling{
+    padding: ;
+  } */
+</style>
+
+
+
+<div class="right_col" role="main" id="mybody">
+  <!-- top tiles -->
+  <div class="row" style="display: inline-block;">
+
+    <div class="col-md-2 col-sm-4  tile_stats_counts">
+    </div>
+
+  </div>
+  <!-- /top tiles -->
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12 ">
+      <div class="dashboard_graph x_panel">
+        <div class="">
+          <h3>Top Ranked </h3>
+          <div>
+            <button type="button" class="btn btn-outline-success mybtn active">ALL</button>
+            <button type="button" class="btn btn-outline-success mybtn">TOP</button>
+            <button type="button" class="btn btn-outline-success mybtn">3 TO 4 </button>
+            <button type="button" class="btn btn-outline-success mybtn">NOT ALL</button>
+          </div>
+        </div>
+        <div class="x_content">
+          <div class="demo-container" style="width:300px">
+            <canvas id="doughnut-chart"  class="demo-placeholder"></canvas>
+            <!-- <div id="myChart" class="demo-placeholder"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12 ">
+      <div class="">
+        <h2>Rank Search Volume</h2>
+        
+        
+      </div>
+      <div class="x_content">
+        <table class="" style="width:100%">
+     
+          <tr>
+            <td>
+              <!-- <canvas class="canvasDoughnut" height="180" width="200" style="margin: 15px 10px 10px 0"></canvas> -->
+              <canvas id="bubble-chart"  />
+      </div>
+      </td>
+     
+      </tr>
+      </table>
+     
+    </div>
+    
+  </div>
+
+
+  <table class="table">
+    <h2>Query Explore</h2>
+    <thead>
+      <tr>
+        <th scope="col">Search Volume</th>
+        <th scope="col">Traffic</th>
+        <th scope="col">Average Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>12</td>
+        <td>23</td>
+        <td>122</td>
+      </tr>
+      <tr>
+        
+        <td>12</td>
+        <td>23</td>
+        <td>122</td>
+      </tr>
+      <tr>
+        
+        <td>11</td>
+        <td>27</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        
+        <td>32</td>
+        <td>33</td>
+        <td>142</td>
+      </tr>
+      <tr>
+        
+        <td>13</td>
+        <td>43</td>
+        <td>422</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>33</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+<!-- footer content -->
+<!-- <footer>
+  <div class="pull-right">
+    Gentelella -  by <a href="#">Colorlib</a>
+  </div>
+  <div class="clearfix"></div> -->
+</footer>
+<!-- /footer content -->
+</div>
+</div>
+
+
+
+<script>
+  new Chart(document.getElementById("bubble-chart"), {
+    type: 'bubble',
+    data: {
+      labels: "Africa",
+      datasets: [
+        {
+          label: ["Clicks"],
+          backgroundColor: "rgba(255,221,50,0.2)",
+          borderColor: "rgba(255,221,50,1)",
+          data: [{
+            x: 21269017,
+            y: 5.245,
+            r: 15
+          }]
+        }, {
+          label: ["CTR"],
+          backgroundColor: "rgba(0,0,0,0.2)",
+          borderColor: "#000",
+          data: [{
+            x: 83,
+            y: 994,
+            r: 15
+          }]
+        },
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }, scales: {
+        yAxes: [{ 
+          scaleLabel: {
+            display: true,
+            labelString: "Happiness"
+          }
+        }],
+        xAxes: [{ 
+          scaleLabel: {
+            display: true,
+            labelString: "GDP (PPP)"
+          }
+        }]
+      }
+    }
+});
+
+
+
+new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Clicks", "CTR", "Impression"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [2478,5267,433.0000]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+</script>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{
+    "rows": [
+        {
+            "keys": [
+                "2021-10-09"
+            ],
+            "clicks": 839,
+            "impressions": 7329,
+            "ctr": 0.11447673625324055,
+            "position": 6.008050211488607
+        },
+        {
+            "keys": [
+                "2021-10-10"
+            ],
+            "clicks": 777,
+            "impressions": 6944,
+            "ctr": 0.11189516129032258,
+            "position": 6.183611751152074
+        },
+        {
+            "keys": [
+                "2021-10-11"
+            ],
+            "clicks": 685,
+            "impressions": 6572,
+            "ctr": 0.10423006695069995,
+            "position": 6.484936092513695
+        },
+        {
+            "keys": [
+                "2021-10-12"
+            ],
+            "clicks": 793,
+            "impressions": 6310,
+            "ctr": 0.12567353407290016,
+            "position": 6.173534072900159
+        }
+    ],
+    "responseAggregationType": "byProperty"
+}
